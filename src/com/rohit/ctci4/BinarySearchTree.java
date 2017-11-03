@@ -13,18 +13,23 @@ public class BinarySearchTree {
 		}
 		
 	}
-	Node root;
+	public Node root;
 	
-	public void insert(Node node, int value) {
+	private static Node insert(Node node, int value) {
 		if(node != null) {
-			if(value <= node.left.key) {
-				insert(node.left, value);
+			if(value <= node.key) {
+				node.left = insert(node.left, value);
 			}else {
-				insert(node.right, value);
+				node.right = insert(node.right, value);
 			}
 		}else {
-			node = new Node(value);
+			return new Node(value);
 		}
+		return node;
+	}
+	
+	public void insert(int value) {		
+		root=insert(root, value);
 	}
 	
 	public boolean contains(Node node, int value) {
@@ -63,7 +68,9 @@ public class BinarySearchTree {
 		}
 	}
 	
-	public void deleteNode(Node node) {
-		
+	public boolean deleteNode(int key, Node parent) {
+
+
+		return false;
 	}
 }
