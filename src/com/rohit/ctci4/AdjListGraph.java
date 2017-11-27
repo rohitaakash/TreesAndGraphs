@@ -34,7 +34,7 @@ public class AdjListGraph {
 		adjList.remove(i);
 	}
 	
-	public boolean checkEdge(int i, int j) {
+	public boolean hasEdge(int i, int j) {
 		for(int k: adjList.get(i)) {
 			if(k == j) return true;
 		}
@@ -48,11 +48,11 @@ public class AdjListGraph {
 		adjListGraph.addEdge(1, 2);
 		adjListGraph.addEdge(1, 3);
 		
-		System.out.println(adjListGraph.checkEdge(0, 2));
-		System.out.println(adjListGraph.checkEdge(0, 1));
+		System.out.println(adjListGraph.hasEdge(0, 2));
+		System.out.println(adjListGraph.hasEdge(0, 1));
 		
 		adjListGraph.removeEdge(0, 1);
-		System.out.println(adjListGraph.checkEdge(0, 1));
+		System.out.println(adjListGraph.hasEdge(0, 1));
 		
 		AdjacencyListGraph.main(null);
 		
