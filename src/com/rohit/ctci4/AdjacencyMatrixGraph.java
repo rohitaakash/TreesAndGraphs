@@ -23,7 +23,7 @@ public class AdjacencyMatrixGraph {
 		}
 	}
 
-	public boolean checkEdge(int i, int j) {
+	public boolean hasEdge(int i, int j) {
 		if (i >= 0 && i < numVertices && j >= 0 && j < numVertices) {
 			return adjMatrix[i][j];
 		}else {
@@ -37,10 +37,10 @@ public class AdjacencyMatrixGraph {
 		adjMatrixGraph.addEdge(1, 2);
 		adjMatrixGraph.addEdge(1, 3);
 		
-		System.out.println(adjMatrixGraph.checkEdge(0, 2));
-		System.out.println(adjMatrixGraph.checkEdge(0, 1));
+		System.out.println(adjMatrixGraph.hasEdge(0, 2));
+		System.out.println(adjMatrixGraph.hasEdge(0, 1));
 		
 		adjMatrixGraph.removeEdge(0, 1);
-		System.out.println(adjMatrixGraph.checkEdge(0, 1));
+		System.out.println(adjMatrixGraph.hasEdge(0, 1));
 	}
 }
